@@ -2,10 +2,26 @@
     background: #F8FAF9;
     padding: 50px 45px 34px;
     margin-bottom: 10px;
+    overflow: hidden;
+    position: relative;
+
+    &:before {
+        content: "";
+        display: block;
+        width: 90px;
+        height: 90px;
+        background: #fff;
+        border-radius: 50%;
+        position: absolute;
+        left: 50%;
+        transform: translatex(-50%);
+        top: -65px;
+    }
 }
 
 .reviews__display-inner {
     display: flex;
+    margin-bottom: 14px;
 }
 
 .reviews__avatar {
@@ -21,13 +37,14 @@
 
 .reviews__content {
     flex: 1;
-    margin-left: 20px;    
+    margin-left: 37px;
+    margin-top: 15px;
 }
 
 .reviews__title {
-    font-size: 30px;
+    font-size: 27px;
     font-weight: bold;
-    margin-bottom: 22px;
+    margin-bottom: 9px;
     color: #292929;
 }
 

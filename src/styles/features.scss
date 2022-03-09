@@ -1,9 +1,11 @@
 .features {
     display: flex;
+    font-weight: bold;
 }
 
 .features__item {
     margin-right: 46px;
+    align-items: center;
 
     &:last-child {
         margin-right: 0;

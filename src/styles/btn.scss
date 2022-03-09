@@ -1,11 +1,12 @@
 .btn {
-    font-size: 19px;
+    font-size: 16px;
     font-weight: bold;
-    padding: 18px 35px;
+    padding: 21px 41px;
     text-transform: uppercase;
     border-radius: 100px;
     line-height: 1;
     text-decoration: none;
+    display: inline-block;
 
     &--theme-yellow {
         background: #FEDB3F;
@@ -18,6 +19,7 @@
         color: white;
         border: none;
         text-transform: none;
+        font-weight: normal;
 
         &:hover {
             color: black;
