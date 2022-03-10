@@ -7,6 +7,7 @@
     line-height: 1;
     text-decoration: none;
     display: inline-block;
+    cursor: pointer;
 
     &--theme-yellow {
         background: #FEDB3F;
@@ -23,10 +24,5 @@
         text-transform: none;
         font-weight: normal;
         font-size: 18px;
-
-        /*&:hover {
-            color: black;
-            background: #FEDB3F;
-        }*/
     }
 }
