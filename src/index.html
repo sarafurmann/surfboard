@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/normalize.css">
     <link rel="stylesheet" href="./styles/main.scss">
@@ -161,20 +161,20 @@
             </section>
             <section class="section order-section section--font--color--white">
                 <div class="container">
-                    <h2 class="section__title">Закажите доску</h2>
+                    <h2 class="section__title section__title--order">Закажите доску</h2>
                     <form action="" class="form">
                         <div class="form__col">
-                            <div class="form__row">
+                            <div class="form__row form__row--first">
                                 <label class="form__block">
                                     <div class="form__title">Имя</div>
-                                    <input type="text" class="form__input"></input>
+                                    <input type="text" class="form__input form__input--first"></input>
                                 </label>
                                 <label class="form__block">
                                     <div class="form__title">Телефон</div>
-                                    <input type="text" class="form__input"></input>
+                                    <input type="text" class="form__input form__input--first"></input>
                                 </label>
                             </div>
-                            <div class="form__row">
+                            <div class="form__row form__row--second">
                                 <label class="form__block">
                                     <div class="form__title">Улица</div>
                                     <input type="text" class="form__input"></input>
@@ -183,7 +183,7 @@
                             <div class="form__row">
                                 <label class="form__block">
                                     <div class="form__title">Дом</div>
-                                    <input type="text" class="form__input"></input>
+                                    <input type="text" class="form__input form__input--width"></input>
                                 </label>
                                 <label class="form__block">
                                     <div class="form__title">Корпус</div>
@@ -200,30 +200,32 @@
                             </div>
                         </div>
                         <div class="form__col">
-                            <div class="form__row">
+                            <div class="form__row form__row--last">
                                 <label class="form__block">
                                     <div class="form__title">Комментарий</div>
                                     <input type="text" class="form__input form__input--textarea"></input>
                                 </label>
                             </div>
-                            <div class="form__controls">
-                                <label class="radio">
-                                    <input type="radio" name="option" class="radio__elem">
-                                    <div class="radio__visible"></div>
-                                    <div class="radio__title">Оплата наличными</div>
-                                </label>
-                                <label class="radio">
-                                    <input type="radio" name="option" class="radio__elem">
-                                    <div class="radio__visible"></div>
-                                    <div class="radio__title">Оплата картой</div>
-                                </label>
-                            </div>
-                            <div class="form__controls">
-                                <label class="radio radio--checkbox">
-                                    <input type="checkbox" name="option" class="radio__elem">
-                                    <div class="radio__visible"></div>
-                                    <div class="radio__title">Не перезванивать</div>
-                                </label>
+                            <div class="form__control">
+                                <div class="form__controls">
+                                    <label class="radio">
+                                        <input type="radio" name="option" class="radio__elem">
+                                        <div class="radio__visible"></div>
+                                        <div class="radio__title">Оплата наличными</div>
+                                    </label>
+                                    <label class="radio">
+                                        <input type="radio" name="option" class="radio__elem">
+                                        <div class="radio__visible"></div>
+                                        <div class="radio__title">Оплата картой</div>
+                                    </label>
+                                </div>
+                                <div class="form__controls">
+                                    <label class="radio radio--checkbox">
+                                        <input type="checkbox" name="option" class="radio__elem">
+                                        <div class="radio__visible"></div>
+                                        <div class="radio__title">Не перезванивать</div>
+                                    </label>
+                                </div>
                             </div>
                             <div class="form__btns">
                                 <input type="submit" value="Заказать" class="btn btn--theme-yellow">

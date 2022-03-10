@@ -4,8 +4,8 @@
 
 .benefit__image-wrapper {
     display: inline-block;
-    width: 150px;
-    height: 150px;
+    width: 128px;
+    height: 128px;
     position: relative;
     background: #F2F5F4;
     border-radius: 50%;
@@ -14,7 +14,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 0 auto;
+    margin: 0 auto 15px auto;
 }
 
 .benefit__icon {
@@ -39,4 +39,5 @@
     font-weight: bold;
     color: #292929;
     font-size: 27px;
+    margin-bottom: 16px;
 }

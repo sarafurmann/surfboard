@@ -12,6 +12,8 @@
         background: #FEDB3F;
         color: #000;
         border: none;
+        margin-left: -10px;
+        margin-right: -20px;
     }
 
     &--theme-transparent {
@@ -20,6 +22,7 @@
         border: none;
         text-transform: none;
         font-weight: normal;
+        font-size: 18px;
 
         &:hover {
             color: black;

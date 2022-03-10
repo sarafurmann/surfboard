@@ -1,10 +1,11 @@
 .form {
     display: flex;
+    margin-top: 53px;
 }
 
 .form__col {
     flex: 1;
-    margin-right: 30px;
+    margin-right: 29px;
 
     &:last-child {
         margin-right: 0;
@@ -13,7 +14,19 @@
 
 .form__row {
     display: flex;
-    margin-bottom: 18px;
+    margin-bottom: 32px;
+
+    &--first {
+        margin-bottom: 5px;
+    }
+
+    &--second {
+        margin-bottom: 7px;
+    }
+
+    &--last {
+        margin-bottom: 19px;
+    }
 }
 
 .form__block {
@@ -27,13 +40,20 @@
 
 .form__input {
     width: 100%;
-    padding: 18px 11px;
+    padding: 17px 11px;
     border: solid 3px transparent;
+    border-radius: 4px;
+
+    &--first {
+        width: 222px;
+    }
 
     &--textarea {
-        height: 180px;
+        height: 152px;
+        width: 450px;
         resize: none;
         margin-bottom: 15px;
+        border-radius: 4px;
     }
 
     &:focus {
@@ -42,10 +62,13 @@
     }
 }
 
+.form__control {
+    margin-bottom: 7px;
+}
 .form__controls {
     display: flex;
     flex-wrap: wrap;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 }
 
 .form__btns {

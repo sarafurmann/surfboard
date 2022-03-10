@@ -6,7 +6,7 @@
 
     &--checkbox {
         .radio__visible {
-            border-radius: 0;
+            border-radius: 4px;
 
             &:before {
                 background: url(../images/page4/arrow.png) no-repeat;
@@ -20,7 +20,8 @@
     display: none;
 
     &:checked ~ .radio__visible {
-        &::before {
+
+        &:before {
             display: block;
         }
     }
