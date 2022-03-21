@@ -1,6 +1,11 @@
 $conteinerWidth: 940px;
 $baseFontSize: 18px;
 
+$tablets: 768px;
+$phones: 480px;
+$small-phones: 380px;
+
+@import './media.scss';
 @import './layout.scss';
 @import './hero.scss';
 @import './header.scss';
@@ -17,4 +22,5 @@ $baseFontSize: 18px;
 @import './order.scss';
 @import './radio.scss';
 @import './fixed-menu.scss';
-
+@import './hamburger.scss';
+@import './map.scss';
