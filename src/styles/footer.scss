@@ -3,8 +3,21 @@
     bottom: 0;
     left: 0;
     right: 0;
-    padding: rem(23px) 0;
+    padding: rem(18px) rem(93px);
     background: #fff;
+    font-size: rem(21px);
+    line-height: rem(24px);
+    display: flex;
+
+    @include tablets {
+        padding: rem(18px) rem(12px);
+        height: rem(107px);
+    }
+
+    @include phones {
+        flex-direction: column;
+        height: rem(151px);
+    }
 }
 
 .footer__container {
@@ -16,3 +29,19 @@
         flex-direction: column;
     }
 }
+
+.footer__col {
+    display: flex;
+    align-items: center;
+}
+
+.footer__col--right {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.footer__phone {
+    display: flex;
+}
+

@@ -1,10 +1,20 @@
-.contacts {
+.phone-number {
+    font-size: rem(22px);
+    text-decoration: none;
     font-style: normal;
-    font-size: rem(21px);
-    color: #292929;
+    color: white;
+    white-space: nowrap;
+
+    &--footer {
+        color: black;
+    }
+}
+
+.contacts--footer {
+    font-style: normal;
 
     @include phones {
-        margin-bottom: 10px;
+        margin-bottom: rem(20px);
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -12,9 +22,21 @@
 }
 
 .contacts__place {
-    font-style: normal;
+    color: black;
+    @include phones {
+        margin-bottom: rem(12px);
+    }
 }
 
 .contacts__phone {
     color: #292929;
+}
+
+.phone-number__icon-el {
+    color: #292929;
+    margin-top: 5px;
+
+    @include tablets {
+        display: flex;
+    }
 }

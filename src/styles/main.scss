@@ -3,7 +3,7 @@ $baseFontSize: 18px;
 
 $tablets: 768px;
 $phones: 480px;
-$small-phones: 380px;
+$small-phones: 410px;
 
 @import './media.scss';
 @import './layout.scss';
@@ -24,3 +24,7 @@ $small-phones: 380px;
 @import './fixed-menu.scss';
 @import './hamburger.scss';
 @import './map.scss';
+@import './svg.scss';
+@import './socials.scss';
+@import './contacts.scss';
+@import './footer.scss';

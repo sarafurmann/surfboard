@@ -6,7 +6,7 @@
     @include tablets {
         background: #1968B1;
         height: rem(91px);
-        padding: 30px;
+        padding: rem(30px);
     }
 }
 
@@ -32,7 +32,8 @@
 }
 
 .menu__item {
-    margin-right: rem(27px);
+    margin-right: rem(22px);
+    font-weight: bold;
     margin-top: 10px;
 
     &:last-child {
@@ -59,11 +60,11 @@
     white-space: nowrap;
 }
 
-.phone-number__icon-elem {
+/*.phone-number__icon-elem {
     width: rem(12px);
     height: rem(12px);
     margin-right: rem(6px);
-}
+}*/
 
 .menu__link {
     text-decoration: none;
