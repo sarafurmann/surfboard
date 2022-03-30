@@ -29,6 +29,10 @@
     display: flex;
     margin-bottom: rem(14px);
 
+    @include tablets {
+        margin-bottom: rem(14px);
+    }
+
     &--first {
         margin-bottom: rem(5px);
     }
@@ -66,7 +70,7 @@
     }*/
 
     &--textarea {
-        height: rem(82px);
+        height: rem(152px);
         /*width: rem(450px);*/
         resize: none;
         margin-bottom: rem(15px);
@@ -98,7 +102,10 @@
     @include tablets {
         display: flex;
         justify-content: center;
+    }
 
+    @include phones {
+        margin-top: rem(33px);
     }
 }
 

@@ -4,6 +4,10 @@
     overflow: hidden;
     position: relative;
 
+    @include tablets {
+        margin-bottom: rem(30px);
+    }
+
     &:before {
         content: "";
         display: block;
@@ -36,6 +40,10 @@
         padding-left: rem(24px);
         padding-bottom: rem(46px);
         padding-right: rem(24px);
+    }
+
+    @include phones {
+        padding: rem(53px) rem(18px) rem(29px);
     }
 }
 
@@ -81,6 +89,14 @@
 .reviews__text {
     margin-bottom: rem(22px);
     line-height: 1.3;
+
+    @include tablets {
+        margin-bottom: rem(16px); 
+    }
+
+    @include phones {
+        margin-bottom: rem(8px);
+    }
 }
 
 .reviews__author {

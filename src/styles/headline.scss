@@ -6,10 +6,15 @@
 .headline__subtitle, .headline__title {
     margin-bottom: rem(15px);
     line-height: 1.2;
+
+    @include phones {
+        margin-bottom: rem(3px);
+
+    }
 }
 
 .headline__subtitle {
     @include phones {
-        padding: 0 5%;
+        padding: 0;
     }
 }

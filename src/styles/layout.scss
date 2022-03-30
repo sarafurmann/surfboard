@@ -35,6 +35,10 @@ body {
     @include tablets {
         width: 100%;
     }
+
+    @include phones {
+        width: 95%;
+    }
 }
 
 h1,

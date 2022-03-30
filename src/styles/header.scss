@@ -4,9 +4,16 @@
     justify-content: space-between;
 
     @include tablets {
+        position: absolute;
         background: #1968B1;
-        height: rem(91px);
-        padding: rem(30px);
+        padding: rem(26px) rem(36px) rem(26px) rem(30px);
+        left: 0;
+        top: 0;
+        right: 0;
+    }
+
+    @include phones {
+        padding: rem(24px) rem(10px) rem(20px) rem(10px);
     }
 }
 
