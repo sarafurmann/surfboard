@@ -6,6 +6,10 @@
         justify-content: flex-start;
     }
 }
+
+.team__title {
+    margin-bottom: rem(14px);
+}
 .team__list {
     display: flex;
     align-items: flex-start;
@@ -21,14 +25,50 @@
     }
 }
 
+.team__list--desktop {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 2%;
+
+    @include tablets {
+        display: none;
+    }
+
+    .team__content--wrapper {
+        position: absolute;
+        top: 100%;
+    }
+}
+
+.team__content--wrapper {
+    overflow: hidden;
+    height: 0;
+    transition: height 0.4s;
+}
+
+.team__list--mobile {
+    display: none;
+    flex-direction: column;
+
+    @include tablets {
+        display: flex;
+    }
+}
+
 .team__item {
     display: flex;
     flex-direction: column;
     align-items: center;
     max-width: rem(220px);
-    min-height: rem(420px);
+    // min-height: rem(420px);
     margin-right: rem(20px);
     flex: 1;
+    position: relative;
+
+    &--active .team__btn::after {
+        transform: rotate(180deg);
+    }
 
     @include tablets() {
         margin-right: 0;
@@ -52,6 +92,20 @@
     display: flex;
     align-items: center;
     justify-content: center;
+
+    @include tablets {
+        margin-bottom: rem(16px);
+    }
+
+    &::after {
+        content: '';
+        width: 8px;
+        height: 7px;
+        margin-left: 5px;
+        background: url(/src/images/trian.png) center center/contain no-repeat;
+        transform: rotate(0deg);
+        transition: transform 0.3s;
+    }
 }
 
 .team__arrow-up {
@@ -74,4 +128,26 @@
 
 .team__content--post {
     color: #000;
+    font-weight: 400;
+
+    @include tablets {
+      font-weight: 700;
+    }
+}
+
+.team__content {
+    font-weight: 300;
+    line-height: 1.25;
+}
+
+.team__avatar {
+    width: rem(220px);
+    height: rem(290px);
+    margin-bottom: rem(21px);
+}
+
+.team__img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
 }

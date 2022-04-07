@@ -46,8 +46,9 @@
         white-space: nowrap;
         position: absolute;
         transform: rotate(-90deg) translateY(-50%);
-        margin-top: rem(600px);
-        margin-left: rem(-30px);
+        transform-origin: 0 0;
+        left: 50%;
+        bottom: 0;
 
         // left: 50%;
         // bottom: -24%;
@@ -65,6 +66,6 @@
     font-size: rem(16px);
     font-weight: normal;
     line-height: 1.5;
-    color: #000;
+    color: white;
     padding: 30px 20px;
 }

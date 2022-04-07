@@ -7,7 +7,7 @@
     display: flex;
 
     @include tablets {
-        background: url("../images/back2.png") center no-repeat, black;
+        background: url("../images/back2.png") 50% / cover no-repeat, #1968B1;
     }
 }
 

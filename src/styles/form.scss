@@ -33,12 +33,20 @@
         margin-bottom: rem(14px);
     }
 
+    @include phones {
+        margin-bottom: rem(12px);
+    }
+
     &--first {
         margin-bottom: rem(5px);
     }
 
     &--second {
         margin-bottom: rem(7px);
+
+        @include phones {
+            margin-bottom: rem(10px);
+        }
     }
 
     &--last {
@@ -75,6 +83,10 @@
         resize: none;
         margin-bottom: rem(15px);
         border-radius: rem(4px);
+        
+        @include tablets {
+            height: rem(82px);
+        }
     }
 
     &:focus {
@@ -112,4 +124,8 @@
 .form__btn--yellow {
     margin-left: rem(-10px);
     margin-right: rem(-20px);
+}
+
+.input__error {
+    border-color: red;
 }
