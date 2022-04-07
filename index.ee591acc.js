@@ -1,0 +1,2 @@
+const openItem=e=>{const t=e.closest(".team__item"),m=t.find(".team__content--wrapper");t.addClass("team__item--active"),m.height(m.find(".team__content--inner").height())},closeEveryItem=e=>{e.find(".team__item").removeClass("team__item--active"),e.find(".team__content--wrapper").height(0)};$(".team__btn").click((e=>{const t=$(e.currentTarget),m=t.closest(".team__list");t.closest(".team__item").hasClass("team__item--active")?closeEveryItem(m):(closeEveryItem(m),openItem(t))}));
+//# sourceMappingURL=index.ee591acc.js.map
