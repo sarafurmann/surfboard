@@ -2,7 +2,7 @@
     position: fixed;
     top: 20%;
     right: 3%;
-    z-index: 100;
+    z-index: 10000;
 
     @include tablets {
         display: none;
@@ -39,5 +39,24 @@
         left: 50%;
         transform: translate(-50%, -50%);
 
+    }
+}
+
+.fixed-menu--shadowed {
+    color: #666666;
+}
+
+.fixed-menu--shadowed {
+    .fixed-menu__link {
+        
+        &:before {
+            background: #666666;
+        }
+    }
+
+    .fixed-menu__item--active {
+        .fixed-menu__link {
+            border-color: #666;
+        }
     }
 }

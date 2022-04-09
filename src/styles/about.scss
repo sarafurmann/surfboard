@@ -2,6 +2,10 @@
     background: url(../images/aboutmenu.png) center center / cover no-repeat;
     position: relative;
     color: white;
+
+    @include phones {
+        position: absolute;
+    }
 }
 
 .about__title {

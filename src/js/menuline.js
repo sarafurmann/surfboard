@@ -1,129 +1,118 @@
-// const sections = $('.section');
-// const display = $('.maincontent');
-// const sideMenu = $('.fixed-menu');
-// const sideMenuItems = $('.fixed-menu__item');
+const sections = $("section");
+const display = $(".maincontent");
 
-// const mobileDetect = new MobileDetect(window.navigator.userAgent);
-// const isMobile = mobileDetect.mobile();
+const mobileDetect = new MobileDetect(window.navigator.userAgent);
+const isMobile = mobileDetect.mobile();
 
-// let inScroll = false;
 
-// sections.first().addClass('section--active');
+let inScroll = false;
 
-// const countSectionPosition = (sectionEq) => {
-//     const position = sectionEq * -100;
+sections.first().addClass("active");
 
-//     if (isNaN(position)) {
-//         console.error("Неверно");
-//         return 0;
-//     }
-//     return position;
-// }
+const performTransition = sectionEq => {
 
-// const changeMenuTheme = (sectionEq) => {
-//     const currentSection = sections.eq(sectionEq)
-//     const sideMenuTheme = currentSection.attr('data-sidemenu-theme')
-  
-//     if (sideMenuTheme === 'dark') {
-//       sideMenu.addClass('fixed-menu--dark')
-//     } else {
-//       sideMenu.removeClass('fixed-menu--dark')
-//     }
-// }
+    if (inScroll === false) {
+        inScroll = true;
+        const position = sectionEq * -100;
 
-// const resetActiveClassForItem = (items, itemEq, activeClass) => {
-//     items.eq(itemEq).addClass(activeClass).siblings().removeClass(activeClass)
-//   }
-  
-//   const performTransition = (sectionEq) => {
-//     if (inScroll) return
-  
-//     inScroll = true
-  
-//     const position = countSectionPosition(sectionEq)
-  
-//     changeMenuTheme(sectionEq)
-  
-//     display.css({
-//       transform: `translateY(${position}%)`,
-//     })
+            const currentSection = sections.eq(sectionEq);
+            const menuTheme = currentSection.attr("data-sidemenu-theme");
+            const sideMenu = $(".fixed-menu");
 
-//     resetActiveClassForItem(sections, sectionEq, 'section--active')
+            if (menuTheme === "dark") {
+                sideMenu.addClass("fixed-menu--shadowed");
+            } else {
+                sideMenu.removeClass("fixed-menu--shadowed");
+            }
 
-//     setTimeout(() => {
-//       inScroll = false
-  
-//       resetActiveClassForItem(sideMenuItems, sectionEq, 'fixed-menu__item--active')
-//     }, 1300)
-// }
+        display.css({
+            transform: `translateY(${position}%)`
+        });
 
-// const viewportScroller = () => {
-//     const activeSection = sections.filter('.section--active')
-//     const nextSection = activeSection.next()
-//     const prevSection = activeSection.prev()
-  
-//     return {
-//       next() {
-//         if (nextSection.length) {
-//           performTransition(nextSection.index())
-//         }
-//       },
-  
-//       prev() {
-//         if (prevSection.length) {
-//           performTransition(prevSection.index())
-//         }
-//       },
-//     }
-// }
+        sections.eq(sectionEq).addClass("active").siblings().removeClass("active");
 
-// $(window).on('wheel', (e) => {
-//     const deltaY = e.originalEvent.deltaY
-//     const scroller = viewportScroller()
-  
-//     if (deltaY > 0) {
-//       scroller.next()
-//     }
-//     if (deltaY < 0) {
-//       scroller.prev()
-//     }
-// })
+        sideMenu.find(".fixed-menu__item").eq(sectionEq).addClass("active").siblings().removeClass("active");
+        
+        setTimeout (() => {
+            inScroll = false;
 
-// $(window).on('keydown', (e) => {
-//     const tagName = e.target.tagName.toLowerCase()
-//     const userTypingInInputs = tagName === 'input' || tagName === 'textarea'
-//     const scroller = viewportScroller()
-  
-//     if (userTypingInInputs) return
-//     switch (e.keyCode) {
-//       case 38:
-//         scroller.prev()
-//         break
-//       case 40:
-//         scroller.next()
-//         break
-//     }
-// })
+            sideMenu
+            .find(".fixed-menu__item")
+            .eq(sectionEq)
+            .addClass("fixed-menu__item--active")
+            .siblings()
+            .removeClass("fixed-menu__item--active");
 
-// $('.wrapper').on('touchmove', (e) => e.preventDefault())
+        }, 1300);
+    }
+};
 
-// $('[data-scroll-to]').click((e) => {
-//   e.preventDefault()
-//   const $this = $(e.currentTarget)
-//   const target = $this.attr('data-scroll-to')
-//   const reqSection = $(`[data-section-id=${target}]`)
+const scrollViewport = direction => {
+    const activeSection = sections.filter(".active");
+    const nextSection = activeSection.next();
+    const prevSection = activeSection.prev();
 
-//   performTransition(reqSection.index())
-// })
+    if (direction === "next" && nextSection.length) {
+        performTransition(nextSection.index())
+    }
 
-// if (isMobile) {
-//     $('body').swipe({
-//       swipe: function (event, direction) {
-//         const scroller = viewportScroller()
-//         let scrollDirection = ''
-//         if (direction === 'up') scrollDirection = 'next'
-//         if (direction === 'down') scrollDirection = 'prev'
-//         scroller[scrollDirection]()
-//       },
-//     })
-// }
+    if (direction === "prev" && prevSection.length) {
+        performTransition(prevSection.index())
+    }
+}
+
+$(window).on("wheel", e => {
+    const deltaY = e.originalEvent.deltaY;
+
+    // console.log("wheeel");
+
+    if (deltaY > 0) {
+        scrollViewport("next");
+    }
+
+    if (deltaY < 0) {
+        scrollViewport("prev");
+    }
+    console.log(deltaY);
+});
+
+$(window).on("keydown", (e) => {
+    // console.log(e.keyCode);
+
+    const tagName = e.target.tagName.toLowerCase();
+
+    if (tagName !== "input" && tagName !== "textarea") {
+        switch (e.keyCode) {
+            case 38: 
+                scrollViewport("prev");
+                break;
+            case 40:
+                scrollViewport("next");
+                break;
+        }
+    }
+})
+
+$(".wrapper").on(".touchmove", exports => e.preventDefault());
+
+$("[data-scroll-to]").click(e => {
+    e.preventDefault();
+
+    const $this = $(e.currentTarget);
+    const target = $this.attr("data-scroll-to");
+    const reqSection = $(`[data-section-id=${target}]`);
+
+    performTransition(reqSection.index());
+})
+
+if (isMobile) {
+    $("body").swipe( {
+        swipe: function (event, direction) {
+            if (direction === "up") {
+                scrollViewport("next")
+            } else if (direction === "down") {
+                scrollViewport("prev")
+            }
+        }
+      });
+}
