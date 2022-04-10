@@ -1,2 +1,0 @@
-const openButton=document.querySelector(".hamburger"),hamburgerMenu=document.querySelector(".hamburger__menu"),closeButton=document.querySelector(".hamburger__menu--close");openButton.addEventListener("click",(e=>{e.preventDefault(),hamburgerMenu.classList.add("active")})),closeButton.addEventListener("click",(e=>{e.preventDefault(),hamburgerMenu.classList.remove("active")}));
-//# sourceMappingURL=index.d9659dc3.js.map
