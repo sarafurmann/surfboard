@@ -3,9 +3,9 @@
     position: relative;
     color: white;
 
-    @include phones {
-        position: absolute;
-    }
+    // @include phones {
+    //     position: absolute;
+    // }
 }
 
 .about__title {
@@ -20,6 +20,9 @@
     top: 0;
     right: 0;
     bottom: 0;
+    width: 100%;
+    height: 100%;
+    justify-content: flex-end;
 }
 
 .about__item {

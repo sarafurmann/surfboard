@@ -57,16 +57,17 @@
 
 .product__item {
     display: flex;
-        align-items: center;
-        flex-direction: row;
-        padding-left: rem(74px);
+    align-items: center;
+    flex-direction: row;
+    padding-left: rem(74px);
 
-        @include tablets {
-            flex-direction: column;
-            text-align: center;
-            align-items: center;
-            padding-left: 0;
-        }
+    @include tablets {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        padding-left: 0;
+        justify-content: center;
+    }
 }
 
 .products__content {

@@ -12,3 +12,10 @@ closeButton.addEventListener('click', (e) => {
   e.preventDefault()
   hamburgerMenu.classList.remove('active')
 })
+
+hamburgerMenu.addEventListener('click', (e) => {
+  e.preventDefault();
+  if (e.target.classList.contains('menu__link')) {
+    hamburgerMenu.classList.remove('active')
+  }
+});
