@@ -13,7 +13,7 @@
         transform: translateY(-50%);
         z-index: 10;
 
-        @include tablets {
+        @include tabl {
             top: rem(237px);
         }
         @include phones {
@@ -25,7 +25,7 @@
 .products__arrow--left {
     left: rem(-22px);
 
-    @include tablets {
+    @include tabl {
         left: 18%;
     }
 
@@ -37,7 +37,7 @@
 .products__arrow--right {
     right: rem(-34px);
 
-    @include tablets {
+    @include tabl {
         right: 18%;
     }
 
@@ -61,7 +61,7 @@
     flex-direction: row;
     padding-left: rem(74px);
 
-    @include tablets {
+    @include tabl {
         flex-direction: column;
         text-align: center;
         align-items: center;
@@ -83,7 +83,7 @@
     margin-right: rem(61px);
     position: relative;
 
-    @include tablets {
+    @include tabl {
         width: rem(318px);
         height: rem(405px);
         margin-top: 0;
@@ -109,7 +109,7 @@
         width: rem(396px);
         height: rem(378px);
 
-        @include tablets {
+        @include tabl {
             width: rem(306px);
             height: rem(292px);
         }
@@ -149,7 +149,7 @@
         }
     }
 
-    @include tablets {
+    @include tabl {
         display: none;
     }
 }
@@ -223,7 +223,7 @@
     text-transform: uppercase;
     margin-bottom: rem(24px);
 
-    @include tablets {
+    @include tabl {
         font-size: rem(30px);
         line-height: rem(36px);
         margin-bottom: rem(14px);
@@ -234,7 +234,7 @@
     color: #666666;
     margin-bottom: rem(24px);
     width: rem(368px);
-    @include tablets {
+    @include tabl {
         width: auto;
     }
 }
@@ -243,7 +243,7 @@
     display: flex;
     margin-bottom: rem(21px);
 
-    @include tablets {
+    @include tabl {
         justify-content: center;
         padding-left: rem(25px);
     }
@@ -251,7 +251,7 @@
 
 .product__prop {
 
-    @include tablets {
+    @include tabl {
         margin-right: rem(52px);
 
         &:last-child {
@@ -266,7 +266,7 @@
     &:first-child {
         margin-right: rem(52px);
 
-        @include tablets {
+        @include tabl {
             margin-right: rem(0px);
         }
     }
@@ -281,7 +281,7 @@
     align-items: center;
     justify-content: space-between;
 
-    @include tablets {
+    @include tabl {
         justify-content: center;
     }
 }
@@ -290,7 +290,7 @@
     font-size: rem(60px);
     margin-right: rem(20px);
 
-    @include tablets {
+    @include tabl {
         margin-right: rem(32px);
     }
 }

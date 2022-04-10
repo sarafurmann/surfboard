@@ -54,14 +54,14 @@ $('.about__btn').on('click', (e) => {
 })
 
 const isTablet = window.matchMedia('(max-width: 800px)').matches;
-const isMobile = window.matchMedia('(max-width: 480px)').matches;
+const isMobiles = window.matchMedia('(max-width: 480px)').matches;
 if (isTablet) {
   reqItemWidth = screenWidth - titlesWidth
 }
-if (isMobile) {
+if (isMobiles) {
   reqItemWidth = screenWidth - titlesBlocks.width()
 } 
-if (!isTablet && !isMobile) {
+if (!isTablet && !isMobiles) {
   reqItemWidth = 500
 }
 

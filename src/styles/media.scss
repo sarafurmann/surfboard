@@ -8,6 +8,12 @@
     }
 }
 
+@mixin tabl {
+    @media screen and (max-width: $tabl) {
+        @content;
+    }
+}
+
 @mixin phones {
     @media screen and (max-width: $phones) {
         @content;
