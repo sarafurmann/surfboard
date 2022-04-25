@@ -1,4 +1,3 @@
-import iconImageHref from '../images/marker.png'
 let myMap
 
 const init = () => {
@@ -15,7 +14,7 @@ const init = () => {
     {
       draggable: false,
       iconLayout: 'default#image',
-      iconImageHref,
+      iconImageHref: 'images/marker.png',
       iconImageSize: [46, 57],
       iconImageOffset: [-35, -52],
     }
